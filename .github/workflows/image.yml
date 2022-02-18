@@ -19,7 +19,7 @@ jobs:
   registry:
     name: Publish to Registry
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 60
     steps:
       - name: Checkout Latest Stable Version
         if: ${{ github.event.inputs.version }} == 'latest'
