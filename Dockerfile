@@ -5,4 +5,4 @@ RUN set -ex; \
     apk upgrade; \
     apk add --no-cache g++
 
-RUN pip install -r requirements.txt
+RUN pip install pymysql requests redis pandas
