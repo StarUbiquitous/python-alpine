@@ -1,5 +1,5 @@
-FROM python:3.9.5-alpine3.13
+FROM python:3.9.10-alpine
 
 RUN apk --update add --no-cache g++
 
-RUN pip install pandas
+RUN pip install pandas pymysql flask requests redis pandas
