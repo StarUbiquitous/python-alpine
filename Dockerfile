@@ -1,12 +1,8 @@
-FROM python:3.9.10-alpine
+FROM python:3.9.5-alpine3.13
 
 RUN set -ex; \
     apk update; \
     apk upgrade; \
-    apk add --no-cache g++ ca-certificates tzdata curl
+    apk add --no-cache g++
 
-RUN set -ex; \
-    curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py; \
-    python get-pip.py
-
-RUN pip install pandas pymysql requests redis 
+RUN pip install pandas pymysql requests redis
