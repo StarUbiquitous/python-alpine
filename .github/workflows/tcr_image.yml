@@ -1,4 +1,4 @@
-name: "Docker Hub Images" 
+name: TCR Images
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
     name: Publish to Registry
     uses: XNXKTech/workflows/.github/workflows/docker-build.yml@main
     with:
-      registry: hub.docker.com
+      registry: ccr.ccs.tencentyun.com
     secrets:
-      username: ${{ secrets.DOCKER_HUB_USER}}
-      password: ${{ secrets.DOCKER_HUB_PASSWORD}}
+      username: ${{ secrets.REGISTRY_USER}}
+      password: ${{ secrets.REGISTRY_PASSWORD}}
