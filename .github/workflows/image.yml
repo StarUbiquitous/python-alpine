@@ -20,7 +20,7 @@ jobs:
     name: Publish to Registry
     uses: XNXKTech/workflows/.github/workflows/docker-build.yml@main
     with:
-      registry: hub.docker.com
+      registry: https://registry-1.docker.io/v2/
     secrets:
       username: ${{ secrets.DOCKER_HUB_USER}}
       password: ${{ secrets.DOCKER_HUB_PASSWORD}}
