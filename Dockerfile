@@ -41,6 +41,6 @@ RUN pip install psycopg2
 
 ##timezone Shanghai
 RUN set -ex; \
-    apk add --no-cache tzdata; \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime; \
-    apk del tzdata
+    apk add --no-cache tzdata
+
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
